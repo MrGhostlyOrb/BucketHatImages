@@ -1,0 +1,52 @@
+extends layout.pug
+
+block content
+		script(defer src='/scripts/basketShow.js')
+		div(class = navbar-fixed)
+			nav(id = 'nav' class = 'purple')
+				div(class='nav-wrapper')
+					ul(class='right hide-on-med-and-down')
+							li
+								a(id = 'butInstall' aria-label = 'install' class = 'waves-effect')
+									i(class='material-icons') add_circle_outline
+							li
+								a(id = 'butBasket' aria-label = 'basket' class = 'waves-effect')
+									i(class='material-icons') shopping_basket
+							li
+								a(id = 'butRefresh' aria-label = 'refresh' class = 'waves-effect')
+									i(class='material-icons') notifications
+					a(href='/' class='card-content purple' id = 'title')
+						h1.normal 📎️ Richmond Paper Supply
+						
+		div.pageInfo
+			div.card
+				div.card-content
+					h5 Order Confirmation:
+					p Thank you for placing your order with Richmond Paper Supply, our team in the office has been notified of your order and you should recieve a confirmation of your order shortly. Thank you.
+					a#coll.collection
+					br
+					p#tot Your total was
+					br
+					p#ref
+					br
+					p Click here to print out your order confirmation:
+					br
+					a(class = 'btn purple' onclick = 'window.print();') Print
+						i(class = 'material-icons right') print
+				div.card-content
+					b Feedback : 
+					br
+					p It would be great if you could provide some feedback to us about your experience with this web app and what we could do to improve it.
+					form#feedbackForm()
+						br
+						input(type = 'textarea' id = 'feedback' required)
+						br
+						br
+						a(onclick = 'if(document.getElementById("feedback").value != ""){sendFeedback();mdtoast("Thanks for your feedback")}else{console.log("Not sending")}' class = 'btn purple waves-effect') Send 
+							i(class = 'material-icons right') send
+				
+			
+							
+
+
+

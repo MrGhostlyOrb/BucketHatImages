@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>	
+	<meta charset="UTF-8">
+	<title>Bucket Hat Images</title>
+	<link type="text/css" rel = "stylesheet" href = "/styles/style.css">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="apple-touch-icon" href="/images/bhiLogo.jpg">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="styles/materialize.css"/>
+	<link rel='shortcut icon' type='image/x-icon' href='/images/rich.ico' />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name = "keywords" content = "Keywords here" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Bucket Hat Images Photography">
+	<meta name="description" content="Description Here">
+	<meta name="theme-color" content="#7986cb" />
+  	<script defer src="/scripts/app.js"></script>
+  	<script defer src="/scripts/install.js"></script>
+  	<script defer src="scripts/materialize.js"></script>
+  	<link rel='stylesheet' type='text/css' href='/styles/mdtoast.css'>
+	<script defer src='/scripts/mdtoast.js'></script>
+  	<script>
+		if ('serviceWorker' in navigator) {
+  			window.addEventListener('load', () => {
+    			navigator.serviceWorker.register('/service-worker.js')
+        			.then((reg) => {
+          		console.log('Service worker registered.', reg);
+        			});
+  				});
+			}
+  	</script>
+</head> 
+<body id = "body" onload = "mdtoast('Welcome to Bucket Hat Images', {duration: 1500})" class = "blue lighten-2">
+	<div id = "overlay">
+		 <nav class="nav-extended" style = "background-color:rgba(255,255,255,0.5);z-index:500;position:fixed;">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo center" style = "opacity:1">Bucket Hat Images </a>
+      <img style = "width:4em;height:4em;" class = "left" src = "/images/bhiLogo.png"/>
+      <ul class="right hide-on-med-and-down">
+        <li><a id = "install"><i class = "material-icons">add_circle_outline</i></a></li>
+        <li><a>A second link</a></li>
+        <li><a>A third link</a></li>
+      </ul>
+    </div>
+    <div class="nav-content">
+     <ul class="tabs tabs-transparent">
+        <li class="tab"><a href="/galleries">Galleries</a></li>
+        <li class="tab"><a href="/prints">Prints</a></li>
+        <li class="tab"><a href="/about">About</a></li>
+        <li class="tab"><a href="/contact">Contact</a></li>
+      </ul>
+      <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal hide-on-med-and-down">
+        <i class="material-icons">add</i>
+      </a>
+    </div>
+  </nav>
+		<div class="slider" style = "position:fixed;top:0;height:100%;!important">
+    <ul class="slides" style = "height:100% !important;">
+      <li>
+        <img src="/images/1.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="/images/2.jpg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="/images/3.jpg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="/images/4.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems);
+  });</script>
+		<div class="fixed-action-btn">
+  			<a id = "homeFab" class="btn-floating pulse btn-large blue lighten-2">
+    			<i class="large material-icons">camera</i>
+  			</a>
+  			<ul>
+   				<li><a href = "/basket" class="btn-floating blue lighten-3"><i class="material-icons">shopping_basket</i></a></li>
+    			<li><a id = "installBtn3" class="btn-floating blue lighten-3"><i class="material-icons">system_update</i></a></li>
+    			<li><a href = "/search" class="btn-floating blue lighten-3"><i class="material-icons">search</i></a></li>
+  			</ul>
+		</div>
+		<script> setTimeout(()=>{document.getElementById('homeFab').className = 				'btn-floating pulse btn-large blue lighten-2'}, 5000);document.addEventListener('DOMContentLoaded', function() {
+    		var elems = document.querySelectorAll('.fixed-action-btn');
+    		var instances = M.FloatingActionButton.init(elems);
+    		});	
+    	</script>
+  
+  	</div>	
+		<!-- Modal Structure -->
+	</div>
+  	<div id="modal1" class="modal dark">
+    	<div class="modal-content">
+      		<h4>Cookies!</h4>
+      		<p>A bunch of text <a href = "/privacy">Link to more info</a></p>
+    	</div>
+    	<div class="modal-footer dark">
+      		<a class="modal-close waves-effect waves-green btn-flat dark" id = "modbut">Agree</a>
+    	</div>
+    </div>
+</body>
+

@@ -1,0 +1,32 @@
+// layout
+doctype html
+html.blue.lighten-4(lang='en')
+	head
+		meta(charset='UTF-8')
+		title Bucket Hat Images | #{ title }
+		link(type = 'text/css' rel = 'Stylesheet' href = '/styles/style.css')
+		link(rel='icon' href='/images/rich.ico' type='image/x-icon')
+		link(rel='manifest' href='/manifest.json')
+		link(rel='apple-touch-icon' href='/images/bhiLogo.jpg')
+		link(href='https://fonts.googleapis.com/css2?family=Open+Sans&display=swap' rel='stylesheet')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		meta(name='apple-mobile-web-app-capable' content='yes')
+		meta(name = 'keywords' content = 'Keywords Here')
+		meta(name='apple-mobile-web-app-status-bar-style' content='black')
+		meta(name='apple-mobile-web-app-title' content='Bucket Hat Images')
+		meta(name='description' content='Description Here')
+		meta(name='theme-color' content='#df78ef')
+		link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+		link(type='text/css' rel='stylesheet' href='styles/materialize.css')
+		script(defer src='scripts/materialize.js')
+		script(defer src='/scripts/app.js')
+		script(defer src='/scripts/install.js')
+		link(rel='stylesheet' type='text/css' href='/styles/mdtoast.css')
+		script(defer src='/scripts/mdtoast.js')
+		script if ('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/service-worker.js').then((reg) => {console.log('Service worker registered.', reg);});});}
+	body.blue.lighten-4
+		block content
+			
+				
+
